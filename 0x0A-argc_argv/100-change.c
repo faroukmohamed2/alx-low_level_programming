@@ -127,8 +127,8 @@ int main(int argc, char *argv[])
 		if (x == 1)
 			y++;
 	}
-	else if (x == 1)
-		y++;
+	else if (x >= 1)
+	       y++;	
 		printf("%d\n", y);
 		return (0);
 }
