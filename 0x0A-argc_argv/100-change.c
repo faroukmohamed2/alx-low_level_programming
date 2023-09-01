@@ -73,6 +73,7 @@ int main(int argc, char *argv[])
 	else if (x >= 10)
 	{
 		y = atoi(argv[1]) / 10;
+		x = x % 10;
 		if (x >= 5)
 		{
 			y = y + (x / 5);
@@ -87,7 +88,47 @@ int main(int argc, char *argv[])
 				}
 			}
 		}
+		else if (x >= 2)
+		{
+			y = y + (x / 2);
+			x = x % 2;
+			if (x == 1)
+			{
+				y = y + 1;
+			}
+		}
+		else if (x == 1)
+		{
+			y = y + 1;
+		}
 	}
+	else if (x >= 5)
+	{
+		y = atoi(argv[1]) / 5;
+		x = x % 5;
+		if (x >= 2)
+			{
+				y = y + (x / 2);
+				x = x % 2;
+				if (x == 1)
+				{
+					y = y + 1;
+				}
+			}
+		else if (x == 1)
+		{
+			y = y + 1;
+		}
+	}
+	else if (x >= 2)
+	{
+		x = x % 2;
+		y = atoi(argv[1]) / 2;
+		if (x == 1)
+			y++;
+	}
+	else if (x == 1)
+		y++;
 		printf("%d\n", y);
 		return (0);
 }
