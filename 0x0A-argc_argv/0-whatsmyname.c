@@ -3,7 +3,7 @@
  * main - prints the name of the program
  * @argc: the number of argumens
  * @argv: the arguments
- * Return: 0 
+ * Return: 0
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
