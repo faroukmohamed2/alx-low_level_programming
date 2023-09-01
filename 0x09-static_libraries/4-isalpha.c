@@ -7,4 +7,5 @@ int _isalpha(int c)
 		a = c;
 		_putchar(a);
 	}
+	return (c);
 }
