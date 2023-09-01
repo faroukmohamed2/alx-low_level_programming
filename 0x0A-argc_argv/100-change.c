@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, y;
+	int x, y = 0;
 
 	if (argc != 2)
 	{
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		printf("%d", 0);
 	}	
-	x = atoi(argv[2]) % 25;
+	x = atoi(argv[1]) % 25;
 	if (atoi(argv[1]) >= 25)
 	{
 		y = atoi(argv[1]) / 25;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 			x = x % 10;
 			if (x >= 5)
 			{
-				y = y + (x / 5)
+				y = y + (x / 5);
 				x = x % 5;
 				if (x >= 2)
 				{
@@ -37,17 +37,55 @@ int main(int argc, char *argv[])
 					x = x % 2;
 					if (x == 1)
 					{
-						y = y + 1
+						y = y + 1;
 					}
 				}
 			}
 		}
 		else if(x >= 5)
 		{
-			y = y + (atoi(argv[1]) / 5);
+			y = atoi(argv[1]) / 5;
+				if (x >= 2)
+				{
+					y = y + (x / 2);
+					x = x % 2;
+					if (x == 1)
+					{
+						y = y + 1;
+					}
+				}
 		}
 		else if (x >= 2)
 		{
-			y = y + (atoi(argv[1]) / 2);
+			y = atoi(argv[1]) / 25;
+			if (x == 1)
+			{
+				y = y + 1;
+			}
 		}
-		else
+		else if (x == 1)
+		{
+			y = y + 1;
+		}
+	}
+	else if (x >= 10)
+	{
+		y = atoi(argv[1]) / 10;
+		if (x >= 5)
+		{
+			y = y + (x / 5);
+			x = x % 5;
+			if (x >= 2)
+			{
+				y = y + (x / 2);
+				x = x % 2;
+				if (x == 1)
+				{
+					y = y + 1;
+				}
+			}
+		}
+	}
+		printf("%d\n", y);
+		return (0);
+}
