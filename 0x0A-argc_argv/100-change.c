@@ -44,7 +44,8 @@ int main(int argc, char *argv[])
 		}
 		else if(x >= 5)
 		{
-			y = atoi(argv[1]) / 5;
+				y = y + (x / 5);
+				x = x % 5;	
 				if (x >= 2)
 				{
 					y = y + (x / 2);
@@ -57,7 +58,8 @@ int main(int argc, char *argv[])
 		}
 		else if (x >= 2)
 		{
-			y = atoi(argv[1]) / 25;
+			y = y + (x / 2);
+			x = x % 2;
 			if (x == 1)
 			{
 				y = y + 1;
