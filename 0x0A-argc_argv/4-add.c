@@ -5,6 +5,7 @@
  * main - add the numbers
  * @argc: the number of arguments
  * @argv: the arguments
+ * Return: 0 if true 1 if error
  */
 int main(int argc, char *argv[])
 {
