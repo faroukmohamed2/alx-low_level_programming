@@ -9,9 +9,15 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	unsigned int i;
-	
-	ptr = (char *)malloc(sizeof(str));
+	unsigned int i, j;
+
+	for (j = 0; *(str + j) != '\0';)
+	{
+		j++;
+	}
+	ptr = (char *)malloc(j);
+	if (ptr == NULL)
+		return (NULL);
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
 		*(ptr + i) = *(str + i);
