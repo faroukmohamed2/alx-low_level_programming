@@ -3,7 +3,7 @@
 /**
  * struct dog - declare variables
  * @name: the name
- * @ae: the age
+ * @age: the age
  * @owner: the owner
  */
 struct dog
