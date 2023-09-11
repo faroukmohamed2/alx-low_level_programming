@@ -5,4 +5,5 @@
  */
 int main(void)
 {
-	printf(
+	printf("%s", __FILE__);
+}
