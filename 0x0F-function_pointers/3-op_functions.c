@@ -49,7 +49,7 @@ int op_div(int a, int b)
  * op_mod - get the modulus
  * @a: the first number
  * @b: the second number
- * Retunr: the modulus
+ * Return: the modulus
  */
 int op_mod(int a, int b)
 {
