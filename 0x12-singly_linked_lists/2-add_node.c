@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <string.h>
 /**
- * add_node: add a node to the list
+ * add_node - add a node to the list
  * @head: the head
  * @str: a string to be dublicated
  * Return: addres of the head
