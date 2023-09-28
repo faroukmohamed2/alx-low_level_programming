@@ -16,7 +16,7 @@ unsigned int _pow(int a, int b)
 	return (pow);
 }
 /**
- * binary_to_unit - convert a binary number to unit
+ * binary_to_uint - convert a binary number to unit
  * @b: a pointer to string
  * Return: the convertrd number or 0
  */
