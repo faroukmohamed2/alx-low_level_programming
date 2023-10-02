@@ -8,17 +8,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fd;
+	int fd;
 	char *st;
-	int sz;
+	ssize_t szwr, szrd;
 
 	if (filename == NULL)
 		return (0);
 	st = malloc(letters * sizeof(char));
-	fd = open(filename, O_RDWR);
-	read(fd, st, letters);
-	sz = write(fd, st, letters);
-	if (sz < 0)
+	if (st == NULL)
 		return (0);
-	return (sz);
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+	szrd = read(fd, st, letters);
+	szwr = write(STDOUT_FILENO, st, szrd);
+	free(st);
+	return (szwr);
 }
