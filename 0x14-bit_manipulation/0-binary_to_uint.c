@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _pow - calculates the power
- * @x: the number 
+ * @x: the number
  * @y: the power
  * Return: x to power y
  */
@@ -9,6 +9,7 @@ unsigned int _pow(unsigned int x, int y)
 {
 	int i = 1;
 	unsigned int c = x;
+
 	for (; i < y; i++)
 		x = c * x;
 	if (y == 0)
@@ -17,7 +18,7 @@ unsigned int _pow(unsigned int x, int y)
 }
 /**
  * binary_to_unit - turns binary into decimal
- * @b: a string of 0 / 1
+ * @b: a string of 0/1
  * Return: the number if true or 0 if false
  */
 unsigned int binary_to_uint(const char *b)
@@ -25,10 +26,10 @@ unsigned int binary_to_uint(const char *b)
 	int i = 0, siz = 0;
 	unsigned int dec = 0;
 
-	for (; *(b + siz); siz++)
-		;
 	if (b == NULL)
 		return (0);
+	for (; *(b + siz); )
+		siz++;
 	for (i = 0; *(b + i); i++)
 	{
 		if (*(b + i) != '0' && *(b + i) != '1')
@@ -39,4 +40,3 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (dec / 2);
 }
-
