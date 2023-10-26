@@ -36,7 +36,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		dec = dec + (*(b + i) - '0') * _pow(2, siz - i + 1);
+		dec = dec + (*(b + i) - '0') * _pow(2, siz - i - 1);
 	}
-	return (dec / 2);
+	return (dec);
 }
