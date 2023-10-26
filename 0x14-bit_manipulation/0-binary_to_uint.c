@@ -17,7 +17,7 @@ unsigned int _pow(unsigned int x, int y)
 	return (x);
 }
 /**
- * binary_to_unit - turns binary into decimal
+ * binary_to_uint - turns binary into decimal
  * @b: a string of 0/1
  * Return: the number if true or 0 if false
  */
