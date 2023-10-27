@@ -17,6 +17,8 @@ int get_bit(unsigned long int n, unsigned int index)
 		 sizz++;
 	}
 	num = malloc(sizeof(int) * (sizz + 1));
+	if ((int)index > sizz)
+		return (-1);
 	for (i = 0; i < sizz; i++)
 	{
 		*(num + i) = x % 2;
