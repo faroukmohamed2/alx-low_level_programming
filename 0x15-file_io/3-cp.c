@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	while (chars == 1024)
 	{
 		chars = read(file_from, buffer, 1024);
-		if (rdsize == -1)
+		if (chars == -1)
 			print_error(-1, 0, argv);
 		wrsize = write(file_to, buffer, chars);
 		if (wrsize == -1)
