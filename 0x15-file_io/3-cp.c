@@ -1,7 +1,7 @@
 #include "main.h"
 #include <fcntl.h>
 /*
- * print_erroe - prints error
+ * print_error - prints error
  * @file_from: the file from
  * @file_to: the file to
  * Return: void
