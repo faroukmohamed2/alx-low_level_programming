@@ -1,12 +1,12 @@
 #include "main.h"
 #include <fcntl.h>
-/*
+/**
  * print_error - prints error
  * @file_from: the file from
  * @file_to: the file to
+ * @argv: file name
  * Return: void
  */
-
 void print_error(int file_from, int file_to, char *argv[])
 {
 	if (file_from == -1)
