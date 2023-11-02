@@ -30,20 +30,23 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to;
 	char buffer[1024];
-	int rdsize, wrsize, closefile;
+	int wrsize, closefile;
 	int chars = 1024;
 
 	if (argc != 3)
+	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
+		exit(97);
+	}
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_WRONLY | O_APPEND | O_TRUNC | O_CREAT, 0664);
 	print_error(file_from, file_to, argv);
 	while (chars == 1024)
 	{
-		rdsize = read(file_from, buffer, 1024);
+		chars = read(file_from, buffer, 1024);
 		if (rdsize == -1)
 			print_error(-1, 0, argv);
-		wrsize = write(file_to, buffer, rdsize);
+		wrsize = write(file_to, buffer, chars);
 		if (wrsize == -1)
 			print_error(0, -1, argv);
 	}
