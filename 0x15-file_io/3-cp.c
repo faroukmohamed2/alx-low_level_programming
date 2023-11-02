@@ -28,7 +28,7 @@ void print_error(int file_from, int file_to, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int file_form, file_to;
+	int file_from, file_to;
 	char buffer[1024];
 	int rdsize, wrsize, closefile;
 	int chars = 1024;
